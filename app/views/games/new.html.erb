@@ -1,14 +1,21 @@
 
-<h1>New game</h1>
-<p><%= @liste %></p>
+<div class="border">
 
-<p>Wath is the longest word you can find?</p>
+  <h1>New game</h1>
+
+  <div class="div-span">
+    <% @liste.each do |letter| %>
+      <span><%= letter %></span>
+    <% end %>
+  </div>
+
+  <p>Wath is the longest word you can find?</p>
 
 
-<form action="/score" data-turbo="false" method="post">
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <input type="text" name="word" placeholder="">
-  <button type="submit">Play</button>
-</form>
-
-<p><%= @word %></p>
+  <form action="/score" data-turbo="false" method="post">
+    <%= hidden_field_tag :liste, @liste%>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <input type="text" name="word" placeholder="">
+    <button type="submit" class="btn btn-outline-primary">Play</button>
+  </form>
+</div>

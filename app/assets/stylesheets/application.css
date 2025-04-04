@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+
+ .btn a {
+  text-decoration: none;
+}
+
+.border {
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+.div-span {
+  padding-top: 25px;
+  padding-bottom: 50px;
+
+}
+
+p {
+  font-size: x-large;
+}
+
+span {
+  font-size: xx-large;
+}

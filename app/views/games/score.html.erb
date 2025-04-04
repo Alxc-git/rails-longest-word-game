@@ -1,5 +1,25 @@
-<p><%= @data %></p>
 
-<p><%= @word %></p>
+<div class="border">
+  <h1>Result</h1>
 
-<p><%= @reponse %></p>
+  <div class="div-span">
+
+    <% if @data['found'] %>
+
+      <p><strong>Congratulations! </strong><%= @word%> is a valid word!</p>
+    <% else %>
+
+      <p>Sorry but <strong><%= @word %></strong> can't be built out of <%= params[:liste].upcase %></p>
+
+    <% end %>
+
+  </div>
+
+  <div>
+    <p>Votre score : <%= @score %></p>
+      <button type="button" class="btn btn-outline-secondary">
+      <%= link_to 'Play again', 'new'%>
+    </button>
+  </div>
+
+</div>
